@@ -1,0 +1,23 @@
+{% extends "layout.html" %} {% block content %}
+<link rel="stylesheet" href="/css/pc/blog_detail.css" />
+<section id="ns_blogdetail">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="box">
+                    <div class="content">
+                        <h4>{{blog.title | safe}}</h4>
+                        <p class="time">{{blog.createdAt | dateformate}}</p>
+                        <div>{{blog.html_text | safe}}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider col-md-3 hidden-sm hidden-xs">
+                {% include "slider.html" ignore missing %}
+            </div>
+        </div>
+    </div>
+</section>
+<script src="/js/jquery.js"></script>
+<script></script>
+{% endblock %}

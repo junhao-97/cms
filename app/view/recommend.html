@@ -1,0 +1,34 @@
+<div id="recommend">
+    <ul>
+        <h4>精选</h4>
+        {% for book in recommendBook %}
+        <li class="read">
+            <img src="{{book.imgurl}}" alt="封面图" style="width: 80px; height: 80px;" class="img_left1">
+            <div class="content_right">
+                <span class="bookname">{{book.title}}</span>
+                <a href="/book/{{book.id}}">
+                    <button type="button" class="btn btn-info btn-default btn_read">阅读</button>
+                </a>
+            </div>
+        </li>
+        {% endfor %} {% for blog in recommendBlog %}
+        <li class="read">
+            <span>
+                <a href="/blog/{{blog.id}}">
+                    {{blog.title}}
+                </a>
+            </span>
+        </li>
+        {% endfor %} {% for item in videoList %}
+        <li class="read">
+            <img src="{{item.imgurl}}" alt="封面图" style="width: 80px; height: 80px;" class="img_left1">
+            <div class="content_right">
+                <span class="bookname">{{item.title}}</span>
+                <a href="/video/{{item.id}}">
+                    <button type="button" class="btn btn-info btn-default btn_read">观看</button>
+                </a>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</div>

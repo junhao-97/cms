@@ -1,0 +1,107 @@
+#ns_book .book .content {
+    background-color: #fff;
+}
+
+#ns_book .book .content .box {
+    display: flex;
+    margin-bottom: 10px;
+    height: 125px;
+}
+
+#ns_book .book .content .box .box-left>img {
+    margin: 15px 15px 0;
+}
+
+#ns_book .book .content .box .box-right {
+    flex: 1;
+    border-bottom: 1px solid #b3b3b3;
+}
+
+#ns_book .book .content .box .box-right .book-time {
+    color: #b3b3b3;
+}
+
+#ns_book .book .content ul>li:last-child .box-right {
+    border: none;
+}
+
+#ns_book .book .content .box .box-right .bookname {
+    display: block;
+    margin: 12px 0;
+}
+
+
+/* 右侧边栏 */
+
+#ns_book .read {
+    display: flex;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+}
+
+#ns_book .read .content_right .bookname {
+    display: block;
+    margin-top: 25px;
+    color: #424242;
+}
+
+#ns_book .read .content_right {
+    float: left;
+}
+
+#ns_book .slider {
+    background-color: #fff;
+}
+
+#ns_book .slider {
+    background-color: #fff;
+}
+
+#ns_book .slider .swiper .swiper-container {
+    width: 260px;
+    height: 180px;
+}
+
+#ns_book .slider .swiper .swiper-container img {
+    width: 260px;
+}
+
+@media screen and (max-width: 1200px) {
+    #ns_book .slider .swiper .swiper-container,
+    #ns_book .slider .swiper .swiper-container img {
+        width: 200px;
+        height: 120px;
+    }
+}
+
+#recommend .read .content_right .bookname {
+    margin-bottom: 10px;
+}
+
+#recommend .img_left1 {
+    margin: 20px 20px 20px 0;
+}
+
+#recommend h4 {
+    height: 30px;
+    line-height: 15px;
+}
+
+#recommend h4,
+#recommend li {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+#recommend li span {
+    height: 30px;
+}
+
+
+/* 页尾 */
+
+#ns_book .footer>h5 {
+    height: 33px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 33px;
+}

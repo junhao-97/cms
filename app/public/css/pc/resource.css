@@ -1,0 +1,123 @@
+/* #ns_resource .download {} */
+
+#ns_resource .download .download-content {
+    padding: 20px 20px 0;
+    background-color: #fff;
+}
+
+#ns_resource .download .download-content>hr {
+    margin-bottom: 0
+}
+
+#ns_resource .download .download-content>h4 {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+#ns_resource .download .download-content ul>li:last-child {
+    border-bottom: none;
+}
+
+#ns_resource .download .download-content .download-data {
+    display: flex;
+    height: 65px;
+    border-bottom: 1px solid #e6e6e6;
+    align-items: center;
+    margin: 0 15px 0;
+}
+
+#ns_resource .download .download-content .download-data a {
+    text-decoration: none;
+}
+
+#ns_resource .download .download-content .download-data .download-title {
+    font-size: 17px;
+    color: #000;
+}
+
+#ns_resource .download .download-content .download-data .download-code {
+    font-size: 14px;
+    color: #808080;
+}
+
+#ns_resource .download .download-content .download-data>a {
+    flex: 1;
+    text-align: right;
+    margin-right: 15px;
+}
+
+
+/* 右侧边栏 */
+
+#ns_resource .read {
+    display: flex;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+}
+
+#ns_resource .read .content_right .bookname {
+    display: block;
+    margin-top: 25px;
+    color: #424242;
+}
+
+#ns_resource .read .content_right {
+    float: left;
+}
+
+#ns_resource .slider {
+    background-color: #fff;
+}
+
+#ns_resource .slider {
+    background-color: #fff;
+}
+
+#ns_resource .slider .swiper .swiper-container {
+    width: 260px;
+    height: 180px;
+}
+
+#ns_resource .slider .swiper .swiper-container img {
+    width: 260px;
+}
+
+@media screen and (max-width: 1200px) {
+    #ns_resource .slider .swiper .swiper-container,
+    #ns_resource .slider .swiper .swiper-container img {
+        width: 200px;
+        height: 120px;
+    }
+}
+
+#recommend .read .content_right .bookname {
+    margin-bottom: 10px;
+}
+
+#recommend .img_left1 {
+    margin: 20px 20px 20px 0;
+}
+
+#recommend h4 {
+    height: 30px;
+    line-height: 15px;
+}
+
+#recommend h4,
+#recommend li {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+#recommend li span {
+    height: 30px;
+}
+
+
+/* 页尾 */
+
+#ns_resource .footer>h5 {
+    height: 33px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 33px;
+}

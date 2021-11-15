@@ -1,0 +1,109 @@
+/* #ns_resource .video {} */
+
+#ns_video .video .video-content {
+    background-color: #fff;
+}
+
+#ns_video .video .video-content ul>li:last-child {
+    border-bottom: none;
+}
+
+#ns_video .video .video-content .video-read a {
+    text-decoration: none;
+}
+
+#ns_video .video-read {
+    display: flex;
+    background-color: #ffffff;
+}
+
+#ns_video .video-read .pic {
+    margin: 20px 15px;
+}
+
+#ns_video .video-read .video-right .video-title {
+    display: block;
+    margin: 25px 0 9px;
+    color: #424242;
+}
+
+#ns_video .video-read .video-right .video-time {
+    margin: 10px 0;
+    color: #b3b3b3;
+}
+
+
+/* 右侧边栏 */
+
+#ns_video .read {
+    display: flex;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+}
+
+#ns_video .read .content_right .bookname {
+    display: block;
+    margin-top: 25px;
+    color: #424242;
+}
+
+#ns_video .read .content_right {
+    float: left;
+}
+
+#ns_video .slider {
+    background-color: #fff;
+}
+
+#ns_video .slider {
+    background-color: #fff;
+}
+
+#ns_video .slider .swiper .swiper-container {
+    width: 260px;
+    height: 180px;
+}
+
+#ns_video .slider .swiper .swiper-container img {
+    width: 260px;
+}
+
+@media screen and (max-width: 1200px) {
+    #ns_video .slider .swiper .swiper-container,
+    #ns_video .slider .swiper .swiper-container img {
+        width: 200px;
+        height: 120px;
+    }
+}
+
+#recommend .read .content_right .bookname {
+    margin-bottom: 10px;
+}
+
+#recommend .img_left1 {
+    margin: 20px 20px 20px 0;
+}
+
+#recommend h4 {
+    height: 30px;
+    line-height: 15px;
+}
+
+#recommend h4,
+#recommend li {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+#recommend li span {
+    height: 30px;
+}
+
+
+/* 页尾 */
+
+#ns_video .footer>h5 {
+    height: 33px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 33px;
+}

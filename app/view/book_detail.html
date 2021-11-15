@@ -1,0 +1,69 @@
+{% extends "layout.html" %} {% block content %}
+<link rel="stylesheet" href="/css/pc/book_detail.css" />
+<section id="ns_bookdetail">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="booklink">
+                    <div class="booklist">
+                        <!-- 左侧下拉菜单 -->
+                        {% for chapter in menu %}
+                        <div class="chapter" chapterid="{{chapter.id}}">
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    {{chapter.dataValues.title}}
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                    {% for section in chapter.dataValues.sectionList %}
+                                    <li festid="{{section.dataValues.id}}">
+                                        <a class="section_name" href="/section/{{section.dataValues.id}}">{{section.dataValues.title}}</a>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="book">
+                    <!-- 阅读内容content -->
+                    <div class="Readcontent">
+                        <div class="content">
+                            <div class="sectionName">
+                                <h4>{{section.dataValues.title}}</h4>
+                                <hr>
+                            </div>
+                            <div class="content-text">
+                                {{section.dataValues.html_text | safe}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <h5>更多内容敬请期待</h5>
+                </div>
+            </div>
+            <div class="slider col-md-1 hidden-sm hidden-xs">
+                <h4>精选:</h4>
+                <ul>
+                    {% for book in bookList %}
+                    <li class="read">
+                        <a href="/book/{{book.id}}">
+                            <div type="button" class="btn btn-default btn_read">
+                                {{book.title}}
+                            </div>
+                        </a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="/js/jquery.js"></script>
+<script></script>
+{% endblock %}

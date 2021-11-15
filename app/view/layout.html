@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JH97</title>
+    <link rel="shortcut icon" href="/config/hotel.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/pc/layout.css">
+    <link rel="stylesheet" href="/css/swiper-bundle.min.css">
+</head>
+
+<body style="background-color: #f6f6f6;">
+    <!-- 导航条 -->
+    <header id="ns_header">
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#ns_nav" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                    <a class="navbar-brand img-logo" href="/">
+                        <img src="/img/logo.png" alt="">
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="ns_nav">
+                    <ul class="nav navbar-nav menu">
+                        <li class=""><a href="/">首页</a></li>
+                        <li class=""><a href="/book">学习手册</a></li>
+                        <li class=""><a href="/blog">技术博客</a></li>
+                        <li class=""><a href="/video">教学视频</a></li>
+                        <li class=""><a href="/resource">资源下载</a></li>
+                    </ul>
+                    <form class="navbar-form navbar-right hidden-md hidden-sm hidden-xs">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="请输入要搜索的内容">
+                        </div>
+                        <button type="submit" class="btn btn-default" id="Search">搜索</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="hyperlink hidden-sm hidden-xs">
+        <div class="code">
+            <img src="/img/vx.jpg" alt="">
+            <span style="font-size: 12px; text-align: center;">添加JH个人微信</span>
+        </div>
+        <div class="codeTeam">
+            <img src="/img/vx.jpg" alt="">
+            <span style="font-size: 12px; text-align: center;">添加JH微信公众号</span>
+        </div>
+        <ul>
+            <li class="user"><img src="/img/朋友.png" alt="" onmouseover="this.src = '/img/朋友1.png'" onmouseout="this.src='/img/朋友.png'"></li>
+            <li class="codeUser"><img src="/img/微信.png" alt="" onmouseover="this.src = '/img/微信1.png'" onmouseout="this.src='/img/微信.png'"></li>
+            <li><img class="toTop" src="/img/向上.png" alt="" onmouseover="this.src = '/img/向上1.png'" onmouseout="this.src='/img/向上.png'"></li>
+        </ul>
+    </div>
+    {% block content %} {% endblock %}{% block js %}{% endblock %}
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script>
+        // 移入移出
+        $(".user").hover(function() {
+            $(".code").show();
+        }, function() {
+            $(".code").hide();
+        });
+        $(".codeUser").hover(function() {
+            $(".codeTeam").show();
+        }, function() {
+            $(".codeTeam").hide();
+        });
+
+        // 返回顶部
+        $(".toTop").click(function() {
+            $("html,body").animate({
+                "scrollTop": "0px"
+            }, 200)
+        })
+
+        // 轮播图
+        var mySwiper = new Swiper('.swiper-container', {
+            autoplay: {
+                delay: 2000, //1秒切换一次
+            },
+            loop: true, // 循环模式选项
+
+            // 如果需要分页器
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // 如果需要前进后退按钮
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
+        })
+
+        // 路径默认active
+        let path = "";
+        if (location.pathname.indexOf("/docs") > -1) {
+            path = "/book"
+        } else if (location.pathname.indexOf("/details") > -1) {
+            path = "/book"
+        } else if (location.pathname.indexOf("/blog") > -1) {
+            path = "/blog"
+        } else if (location.pathname.indexOf("/video") > -1) {
+            path = "/videos"
+        } else if (location.pathname.indexOf("/videosmenu") > -1) {
+            path = "/videosmenu"
+        } else {
+            path = location.pathname;
+        }
+
+        console.log(path)
+        switch (path) {
+            case "/":
+                setLine(0);
+                break;
+            case "/book":
+                setLine(1);
+                break;
+            case "/blog":
+                setLine(2);
+                break;
+            case "/videos":
+                setLine(3);
+                break;
+            case "/resource":
+                setLine(4);
+                break;
+        }
+
+        function setLine(index) {
+            $("ul li").eq(index).addClass("active");
+            console.log(index);
+        }
+        // 搜索功能
+        $(function() {
+            var search_input = $(".form-group input"),
+                search_content = $(".search_content");
+            $(search_input).on("keyup", function() {
+                if (search_input.val() == '') {
+                    $(search_content).show();
+                }
+                $(".search_content li:contains(" + search_input.val().trim() + ")").show();
+                $(".search_content li:not(:contains(" + search_input.val().trim() + "))").hide();
+            })
+        })
+    </script>
+</body>
+
+</html>

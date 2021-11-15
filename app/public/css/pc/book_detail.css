@@ -1,0 +1,48 @@
+/* 左边栏 */
+
+#ns_bookdetail .booklist .dropdown .list {
+    display: inline-block;
+    background-color: #fff;
+}
+
+
+/* 中间内容 */
+
+#ns_bookdetail .book {
+    background-color: #fff;
+}
+
+#ns_bookdetail .book .sectionName {
+    padding: 20px 10px 0;
+}
+
+#ns_bookdetail .book .sectionName>h4 {
+    display: inline-block;
+    margin: 0 0 0 20px;
+}
+
+#ns_bookdetail .book .sectionName>hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#ns_bookdetail .book .content-text {
+    padding: 10px 30px 30px 30px;
+}
+
+
+/* 侧边栏 */
+
+#ns_bookdetail .slider .read {
+    margin-bottom: 10px;
+}
+
+
+/* 页尾 */
+
+#ns_bookdetail .footer>h5 {
+    height: 33px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 33px;
+}

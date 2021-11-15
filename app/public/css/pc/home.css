@@ -1,0 +1,112 @@
+/* 标题 */
+
+#ns_content .read_top {
+    display: flex;
+    background-color: #ffffff;
+    height: 50px;
+    margin-top: 0;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#ns_content .read_top .title {
+    margin-left: 25px;
+}
+
+#ns_content .read_top .title_more {
+    position: absolute;
+    right: 25px;
+}
+
+
+/* 阅读内容 */
+
+#ns_content .read {
+    display: flex;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+}
+
+#ns_content .read .img_left {
+    margin: 20px 15px;
+}
+
+#ns_content .read .content_right .bookname {
+    display: block;
+    margin-top: 25px;
+    text-decoration: none;
+}
+
+#ns_content .read .content_right .time {
+    margin: 10px 0;
+    color: #b3b3b3;
+}
+
+#ns_content .read .content_right .read_text {
+    color: #666;
+}
+
+
+/* #ns_content .read .content_right .btn_read {
+
+} */
+
+
+/* 右侧边栏 */
+
+#ns_content .read .content_right {
+    float: left;
+}
+
+#ns_content .slider {
+    background-color: #fff;
+}
+
+#ns_content .slider .swiper .swiper-container {
+    width: 260px;
+    height: 180px;
+}
+
+#ns_content .slider .swiper .swiper-container img {
+    width: 260px;
+}
+
+@media screen and (max-width: 1182px) {
+    #ns_content .slider .swiper .swiper-container,
+    #ns_content .slider .swiper .swiper-container img {
+        width: 200px;
+        height: 120px;
+    }
+}
+
+#recommend .read .content_right .bookname {
+    margin-bottom: 10px;
+}
+
+#recommend .img_left1 {
+    margin: 20px 20px 20px 0;
+}
+
+#recommend h4 {
+    height: 30px;
+    line-height: 15px;
+}
+
+#recommend h4,
+#recommend li {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+#recommend li span {
+    height: 30px;
+}
+
+
+/* 页尾 */
+
+#ns_content .footer>h5 {
+    height: 33px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 33px;
+}

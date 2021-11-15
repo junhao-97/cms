@@ -1,0 +1,82 @@
+{% extends "layout.html" %} {% block content %}
+<link rel="stylesheet" href="/css/pc/home.css" />
+<section id="ns_content">
+    <div class="container">
+        <div class="row">
+            <div class="data col-md-9">
+                <div id="read_list">
+                    <div class="read_top">
+                        <h4 class="title">精选书籍</h4>
+                        <a href="/book" class="title_more">查看更多></a>
+                    </div>
+                    <div class="search_content">
+                        <ul>
+                            {% for book in bookList %}
+                            <li class="read">
+                                <img src="{{book.imgurl}}" alt="封面图" style="width: 100px; height: 100px;" class="img_left">
+                                <div class="content_right">
+                                    <span class="bookname">{{book.title}}</span>
+                                    <p class="time">{{book.createdAt | dateformate}}</p>
+                                    <a href="/book/{{book.id}}"><button type="button" class="btn btn-info btn-default btn_read">阅读</button></a>
+                                </div>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="read_top">
+                        <h4 class="title">精选博客</h4>
+                        <a href="/blog" class="title_more">查看更多></a>
+                    </div>
+                    <div class="search_content">
+                        <ul>
+                            {%for item in blogList%}
+                            <li class="read">
+                                <img src="{{item.imgurl}}" alt="" style="width: 100px; height: 100px;" class="img_left">
+                                <div class="content_right">
+                                    <a href="/blog/{{item.id}}" class="bookname">
+                                        {{item.title}}</a>
+                                    <p class="time">{{item.createdAt | dateformate}}</p>
+                                    <p class="read_text">{{item.md_text.substr(0, 10) + "..."}}</p>
+                                </div>
+                            </li>
+                            {%endfor%}
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="read_top">
+                        <h4 class="title">精选视频</h4>
+                        <a href="/video" class="title_more">查看更多></a>
+                    </div>
+                    <div class="search_content">
+                        <ul>
+                            {% for item in videoList %}
+                            <li class="read">
+                                <div class="picture">
+                                    <img class="img_left" src="{{item.imgurl}}" alt="" style="width: 100px; height: 100px;">
+                                </div>
+                                <div class="content_right">
+                                    <h5 class="bookname">{{item.title}}</h5>
+                                    <p class="time">{{item.createdAt | dateformate}}</p>
+                                    <a href="/video/{{item.id}}">
+                                        <button type="button" class="btn btn-info btn-default btn_read">观看</button>
+                                    </a>
+                                </div>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer">
+                    <h5>更多内容敬请期待</h5>
+                </div>
+            </div>
+            <div class="slider col-md-3 hidden-sm hidden-xs">
+                {% include "slider.html" ignore missing %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

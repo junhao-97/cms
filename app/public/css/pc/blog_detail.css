@@ -1,0 +1,83 @@
+#ns_blogdetail .box {
+    background-color: #fff;
+}
+
+#ns_blogdetail .box .content {
+    padding: 20px 25px 65px;
+}
+
+#ns_blogdetail .box .content>h4 {
+    font-weight: 700;
+    color: #000;
+}
+
+#ns_blogdetail .box .content .time {
+    margin: 15px 0;
+    color: #b3b3b3;
+}
+
+
+/* 右侧边栏 */
+
+#ns_blogdetail .read {
+    display: flex;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+}
+
+#ns_blogdetail .read .content_right .bookname {
+    display: block;
+    margin-top: 25px;
+    color: #424242;
+}
+
+#ns_blogdetail .read .content_right {
+    float: left;
+}
+
+#ns_blogdetail .slider {
+    background-color: #fff;
+}
+
+#ns_blogdetail .slider {
+    background-color: #fff;
+}
+
+#ns_blogdetail .slider .swiper .swiper-container {
+    width: 260px;
+    height: 180px;
+}
+
+#ns_blogdetail .slider .swiper .swiper-container img {
+    width: 260px;
+}
+
+@media screen and (max-width: 1200px) {
+    #ns_blogdetail .slider .swiper .swiper-container,
+    #ns_blogdetail .slider .swiper .swiper-container img {
+        width: 200px;
+        height: 120px;
+    }
+}
+
+#recommend .read .content_right .bookname {
+    margin-bottom: 10px;
+}
+
+#recommend .img_left1 {
+    margin: 20px 20px 20px 0;
+}
+
+#recommend h4 {
+    height: 30px;
+    line-height: 15px;
+}
+
+#recommend h4,
+#recommend li {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+#recommend li span {
+    height: 30px;
+}

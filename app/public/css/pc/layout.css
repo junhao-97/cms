@@ -1,0 +1,75 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#ns_header .navbar {
+    margin-bottom: 15px;
+}
+
+#ns_header .navbar .navbar-header .img-logo img {
+    width: 100px;
+    margin-top: -15px;
+}
+
+#ns_header .navbar #ns_nav .menu li {
+    font-size: 15px;
+    font-family: 微软雅黑;
+    text-align: center;
+    margin: 0px 12px;
+}
+
+#ns_header .navbar-default {
+    background-color: #fff;
+    border-color: transparent;
+}
+
+#ns_header .navbar-default .container .menu li.active a,
+.menu li a:hover {
+    background-color: transparent;
+    border-bottom: 2px solid #0AB4F7;
+}
+
+.hyperlink {
+    z-index: 999;
+    position: fixed;
+    width: 0;
+    bottom: 6%;
+    right: 60px;
+}
+
+.hyperlink ul>li {
+    padding: 13px 0px;
+}
+
+
+/* .hyperlink ul img {
+    width: 38px;
+} */
+
+.hyperlink .code,
+.codeTeam {
+    width: 123px;
+    height: 152px;
+    border: 1px solid #000;
+    text-align: center;
+    display: none;
+}
+
+.hyperlink .code {
+    position: absolute;
+    top: -35px;
+    left: -128px;
+}
+
+.hyperlink .codeTeam {
+    position: absolute;
+    top: 22px;
+    left: -128px;
+}
+
+.hyperlink .code img,
+.codeTeam img {
+    width: 100%;
+}

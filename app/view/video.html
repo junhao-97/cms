@@ -1,0 +1,39 @@
+{% extends "layout.html" %} {% block content %}
+<link rel="stylesheet" href="/css/pc/video.css" />
+<section id="ns_video">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="video">
+                    <div class="video-content">
+                        <ul>
+                            {% for item in videoList %}
+                            <li>
+                                <div class="video-read">
+                                    <img class="pic" src="{{item.imgurl}}" alt="" width="100px" height="100px">
+                                    <div class="video-right">
+                                        <h4 class="video-title">{{item.title}}</h4>
+                                        <p class="video-time">{{item.createdAt | dateformate}}</p>
+                                        <a href="/video/{{item.id}}">
+                                            <button class="btn btn-default btn-info" type="submit">观看</button>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="footer">
+                        <h5>更多内容敬请期待</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="slider col-md-3 hidden-sm hidden-xs">
+                {% include "slider.html" ignore missing %}
+            </div>
+        </div>
+    </div>
+</section>
+<script src="/js/jquery.js"></script>
+<script></script>
+{% endblock %}

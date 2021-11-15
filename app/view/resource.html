@@ -1,0 +1,34 @@
+{% extends "layout.html" %} {% block content %}
+<link rel="stylesheet" href="css/pc/resource.css" />
+<section id="ns_resource">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="download">
+                    <div class="download-content">
+                        <h4>资源下载</h4>
+                        <hr>
+                        <ul>
+                            {% for item in resourceList%}
+                            <li class="download-data">
+                                <span class="download-title">{{item.title}}</span>&nbsp&nbsp
+                                <span class="download-code">提取码:&nbsp{{item.code}}</span>
+                                <a href="{{item.downloadurl}}">立即下载</a>
+                            </li>
+                            {% endfor%}
+                        </ul>
+                    </div>
+                    <div class="footer">
+                        <h5>更多内容敬请期待</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="slider col-md-3 hidden-sm hidden-xs">
+                {% include "slider.html" ignore missing %}
+            </div>
+        </div>
+    </div>
+</section>
+<script src="/js/jquery.js"></script>
+<script></script>
+{% endblock %}

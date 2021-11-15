@@ -1,0 +1,59 @@
+{% extends "layout.html" %} {% block content %}
+<link rel="stylesheet" href="/css/pc/video_detail.css">
+<section id="ns_videodetail">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="detail">
+                    <div class="content">
+                        <div class="box">
+                            <div class="videolist">
+                                <h4 class="title">{{video.title}}</h4>
+                                <p class="video-time">{{video.createdAt | dateformate}}</p>
+                                <div class="video embed-responsive embed-responsive-16by9">
+                                    {{video.iframe | safe}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <h5>更多内容敬请期待</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="slider col-md-3 hidden-sm hidden-xs">
+                {% include "slider.html" ignore missing %}
+            </div>
+        </div>
+    </div>
+</section>
+<script src="/js/jquery.js"></script>
+<script></script>
+{% endblock %}
+
+
+
+
+<!-- <div class="bigbox">
+    <div class="box">
+        <div class="videolist">
+            <h3 class="title">{{video.title}}</h3>
+            <div class="video">
+                {{video.iframe | safe}}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="video_slider">
+    <div class="list">
+        <span class="open">{{video.title}}</span>
+        <div>
+            <span class="anthology">选集</span>
+            <ul>
+                {% for video in videoList %}
+                <li class="videonumber"><a href="/video/{{video.id}}">{{video.title}}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div> -->

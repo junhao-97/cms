@@ -1,0 +1,35 @@
+{% extends "layout.html" %} {% block content %}
+<link rel="stylesheet" href="/css/pc/blog.css" />
+<section id="ns_blog">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="blog">
+                    <div class="blog-content">
+                        <ul>
+                            {%for item in blog%}
+                            <li class="box">
+                                <img src="{{item.imgurl}}" alt="" width="100px" height="100px">
+                                <div class="blog_text">
+                                    <a href="/blog/{{item.id}}">{{item.title}}</a>
+                                    <p class="time">{{item.createdAt | dateformate}}</p>
+                                    <p class="read_text">{{item.md_text.substr(0, 10) + "..."}}</p>
+                                </div>
+                            </li>
+                            {%endfor%}
+                        </ul>
+                    </div>
+                    <div class="footer">
+                        <h5>更多内容敬请期待</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="slider col-md-3 hidden-sm hidden-xs">
+                {% include "slider.html" ignore missing %}
+            </div>
+        </div>
+    </div>
+</section>
+<script src="/js/jquery.js"></script>
+<script></script>
+{% endblock %}

@@ -1,0 +1,104 @@
+/* #ns_blog .blog-content {
+    background-color: #fff;
+} */
+
+#ns_blog .blog-content .box {
+    display: flex;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+}
+
+#ns_blog .blog-content .box>img {
+    margin: 20px 15px;
+}
+
+#ns_blog .blog-content .box .blog_text {
+    float: left;
+}
+
+#ns_blog .blog-content .box .blog_text>a {
+    display: block;
+    margin-top: 25px;
+    text-decoration: none;
+}
+
+#ns_blog .blog-content .box .blog_text .time {
+    margin: 10px 0;
+    color: #b3b3b3;
+}
+
+
+/* 右侧边栏 */
+
+#ns_blog .read {
+    display: flex;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+}
+
+#ns_blog .read .content_right .bookname {
+    display: block;
+    margin-top: 25px;
+    color: #424242;
+}
+
+#ns_blog .read .content_right {
+    float: left;
+}
+
+#ns_blog .slider {
+    background-color: #fff;
+}
+
+#ns_blog .slider {
+    background-color: #fff;
+}
+
+#ns_blog .slider .swiper .swiper-container {
+    width: 260px;
+    height: 180px;
+}
+
+#ns_blog .slider .swiper .swiper-container img {
+    width: 260px;
+}
+
+@media screen and (max-width: 1200px) {
+    #ns_blog .slider .swiper .swiper-container,
+    #ns_blog .slider .swiper .swiper-container img {
+        width: 200px;
+        height: 120px;
+    }
+}
+
+#recommend .read .content_right .bookname {
+    margin-bottom: 10px;
+}
+
+#recommend .img_left1 {
+    margin: 20px 20px 20px 0;
+}
+
+#recommend h4 {
+    height: 30px;
+    line-height: 15px;
+}
+
+#recommend h4,
+#recommend li {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+#recommend li span {
+    height: 30px;
+}
+
+
+/* 页尾 */
+
+#ns_blog .footer>h5 {
+    height: 33px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 33px;
+}
